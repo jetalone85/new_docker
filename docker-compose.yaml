@@ -2,7 +2,7 @@ version: '3.5'
 
 services:
   php:
-    build: ${PWD}/.docker/php
+    build: .docker/php
     volumes: 
       - ./application:/var/www/html
     environment:
@@ -19,8 +19,8 @@ services:
   nginx:
     image: nginx:latest
     volumes:
-      - ${PWD}/.docker/nginx/upstream.conf:/etc/nginx/conf.d/upstream.conf
-      - ${PWD}/.docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+      - .docker/nginx/upstream.conf:/etc/nginx/conf.d/upstream.conf
+      - .docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./application:/var/www/html
     labels:
       - "traefik.frontend.rule=Host:web.default.localhost"
@@ -81,7 +81,7 @@ volumes:
   sylius:
     driver_opts:
       type: none
-      device: $PWD/application
+      device: application
       o: bind
 
 networks:
