@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit CompanyHandshake{% endblock %}
+
+{% block body %}
+    <h1>Edit CompanyHandshake</h1>
+
+    {{ include('shared_company_handshake/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('shared_company_handshake_index') }}">back to list</a>
+
+    {{ include('shared_company_handshake/_delete_form.html.twig') }}
+{% endblock %}

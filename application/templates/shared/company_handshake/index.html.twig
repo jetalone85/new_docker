@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CompanyHandshake index{% endblock %}
+
+{% block body %}
+    <h1>CompanyHandshake index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Accepted</th>
+                <th>AcceptedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for company_handshake in company_handshakes %}
+            <tr>
+                <td>{{ company_handshake.id }}</td>
+                <td>{{ company_handshake.accepted ? 'Yes' : 'No' }}</td>
+                <td>{{ company_handshake.acceptedAt ? company_handshake.acceptedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('shared_company_handshake_show', {'id': company_handshake.id}) }}">show</a>
+                    <a href="{{ path('shared_company_handshake_edit', {'id': company_handshake.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_company_handshake_new') }}">Create new</a>
+{% endblock %}

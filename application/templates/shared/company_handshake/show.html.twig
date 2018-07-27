@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CompanyHandshake{% endblock %}
+
+{% block body %}
+    <h1>CompanyHandshake</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ company_handshake.id }}</td>
+            </tr>
+            <tr>
+                <th>Accepted</th>
+                <td>{{ company_handshake.accepted ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>AcceptedAt</th>
+                <td>{{ company_handshake.acceptedAt ? company_handshake.acceptedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_company_handshake_index') }}">back to list</a>
+
+    <a href="{{ path('shared_company_handshake_edit', {'id': company_handshake.id}) }}">edit</a>
+
+    {{ include('shared_company_handshake/_delete_form.html.twig') }}
+{% endblock %}
