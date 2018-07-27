@@ -15,6 +15,10 @@ services:
     networks:
       - default
     working_dir: /var/www/html
+    resources:
+        limits:
+            cpus: '2'
+                memory: 512M
   
   nginx:
     image: nginx:latest
@@ -27,6 +31,10 @@ services:
       - "traefik.backend=nginx"
     networks:
       - default
+    resources:
+        limits:
+            cpus: '2'
+                memory: 512M
 
   traefik:
     image: traefik
