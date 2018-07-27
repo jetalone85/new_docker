@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Licence{% endblock %}
+
+{% block body %}
+    <h1>Licence</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ licence.id }}</td>
+            </tr>
+            <tr>
+                <th>LicenceNo</th>
+                <td>{{ licence.licenceNo }}</td>
+            </tr>
+            <tr>
+                <th>SurfaceLocation</th>
+                <td>{{ licence.surfaceLocation }}</td>
+            </tr>
+            <tr>
+                <th>WellName</th>
+                <td>{{ licence.wellName }}</td>
+            </tr>
+            <tr>
+                <th>LaheeClass</th>
+                <td>{{ licence.laheeClass }}</td>
+            </tr>
+            <tr>
+                <th>DrillingOperation</th>
+                <td>{{ licence.drillingOperation }}</td>
+            </tr>
+            <tr>
+                <th>Strike</th>
+                <td>{{ licence.strike }}</td>
+            </tr>
+            <tr>
+                <th>WellPurpose</th>
+                <td>{{ licence.wellPurpose }}</td>
+            </tr>
+            <tr>
+                <th>MineralRights</th>
+                <td>{{ licence.mineralRights }}</td>
+            </tr>
+            <tr>
+                <th>WellType</th>
+                <td>{{ licence.wellType }}</td>
+            </tr>
+            <tr>
+                <th>GroundElevation</th>
+                <td>{{ licence.groundElevation }}</td>
+            </tr>
+            <tr>
+                <th>Substance</th>
+                <td>{{ licence.substance }}</td>
+            </tr>
+            <tr>
+                <th>SpudDate</th>
+                <td>{{ licence.spudDate ? licence.spudDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>RigRelease</th>
+                <td>{{ licence.rigRelease ? licence.rigRelease|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>FinishedDrillingDate</th>
+                <td>{{ licence.finishedDrillingDate ? licence.finishedDrillingDate|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Ground</th>
+                <td>{{ licence.ground }}</td>
+            </tr>
+            <tr>
+                <th>CutOrFill</th>
+                <td>{{ licence.cutOrFill }}</td>
+            </tr>
+            <tr>
+                <th>KbGround</th>
+                <td>{{ licence.kbGround }}</td>
+            </tr>
+            <tr>
+                <th>AfeId</th>
+                <td>{{ licence.afeId }}</td>
+            </tr>
+            <tr>
+                <th>AfeEstimate</th>
+                <td>{{ licence.afeEstimate }}</td>
+            </tr>
+            <tr>
+                <th>TotalCost</th>
+                <td>{{ licence.totalCost }}</td>
+            </tr>
+            <tr>
+                <th>FirstDailyReportDate</th>
+                <td>{{ licence.firstDailyReportDate ? licence.firstDailyReportDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>LastDailyReportDate</th>
+                <td>{{ licence.lastDailyReportDate ? licence.lastDailyReportDate|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Deleted</th>
+                <td>{{ licence.deleted ? 'Yes' : 'No' }}</td>
+            </tr>
+            <tr>
+                <th>DeletedAt</th>
+                <td>{{ licence.deletedAt ? licence.deletedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>Jurisdiction</th>
+                <td>{{ licence.jurisdiction }}</td>
+            </tr>
+            <tr>
+                <th>TerminatingZone</th>
+                <td>{{ licence.terminatingZone }}</td>
+            </tr>
+            <tr>
+                <th>LatitudeUtm</th>
+                <td>{{ licence.latitudeUtm }}</td>
+            </tr>
+            <tr>
+                <th>LongitudeUtm</th>
+                <td>{{ licence.longitudeUtm }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('r_v_licence_index') }}">back to list</a>
+
+    <a href="{{ path('r_v_licence_edit', {'id': licence.id}) }}">edit</a>
+
+    {{ include('r_v_licence/_delete_form.html.twig') }}
+{% endblock %}
