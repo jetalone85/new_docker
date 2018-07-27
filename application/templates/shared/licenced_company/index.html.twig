@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LicencedCompany index{% endblock %}
+
+{% block body %}
+    <h1>LicencedCompany index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>BaCode</th>
+                <th>Licence</th>
+                <th>Abbreviation</th>
+                <th>Address</th>
+                <th>Phone</th>
+                <th>AgentName</th>
+                <th>Code</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for licenced_company in licenced_companies %}
+            <tr>
+                <td>{{ licenced_company.id }}</td>
+                <td>{{ licenced_company.baCode }}</td>
+                <td>{{ licenced_company.licence }}</td>
+                <td>{{ licenced_company.abbreviation }}</td>
+                <td>{{ licenced_company.address }}</td>
+                <td>{{ licenced_company.phone }}</td>
+                <td>{{ licenced_company.agentName }}</td>
+                <td>{{ licenced_company.code }}</td>
+                <td>
+                    <a href="{{ path('shared_licenced_company_show', {'id': licenced_company.id}) }}">show</a>
+                    <a href="{{ path('shared_licenced_company_edit', {'id': licenced_company.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_licenced_company_new') }}">Create new</a>
+{% endblock %}

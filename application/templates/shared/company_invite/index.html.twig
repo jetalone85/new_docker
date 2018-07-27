@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CompanyInvite index{% endblock %}
+
+{% block body %}
+    <h1>CompanyInvite index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Hash</th>
+                <th>ConfirmedAt</th>
+                <th>Message</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for company_invite in company_invites %}
+            <tr>
+                <td>{{ company_invite.id }}</td>
+                <td>{{ company_invite.hash }}</td>
+                <td>{{ company_invite.confirmedAt ? company_invite.confirmedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ company_invite.message }}</td>
+                <td>
+                    <a href="{{ path('shared_company_invite_show', {'id': company_invite.id}) }}">show</a>
+                    <a href="{{ path('shared_company_invite_edit', {'id': company_invite.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_company_invite_new') }}">Create new</a>
+{% endblock %}

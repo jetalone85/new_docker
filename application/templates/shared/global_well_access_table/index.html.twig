@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GlobalWellAccessTable index{% endblock %}
+
+{% block body %}
+    <h1>GlobalWellAccessTable index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>WellLicenceId</th>
+                <th>CompanyId</th>
+                <th>Id</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for global_well_access_table in global_well_access_tables %}
+            <tr>
+                <td>{{ global_well_access_table.wellLicenceId }}</td>
+                <td>{{ global_well_access_table.companyId }}</td>
+                <td>{{ global_well_access_table.id }}</td>
+                <td>
+                    <a href="{{ path('shared_global_well_access_table_show', {'id': global_well_access_table.id}) }}">show</a>
+                    <a href="{{ path('shared_global_well_access_table_edit', {'id': global_well_access_table.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="4">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_global_well_access_table_new') }}">Create new</a>
+{% endblock %}

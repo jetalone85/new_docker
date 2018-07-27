@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit GlobalWellAccessTable{% endblock %}
+
+{% block body %}
+    <h1>Edit GlobalWellAccessTable</h1>
+
+    {{ include('shared_global_well_access_table/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('shared_global_well_access_table_index') }}">back to list</a>
+
+    {{ include('shared_global_well_access_table/_delete_form.html.twig') }}
+{% endblock %}

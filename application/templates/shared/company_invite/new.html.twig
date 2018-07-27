@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New CompanyInvite{% endblock %}
+
+{% block body %}
+    <h1>Create new CompanyInvite</h1>
+
+    {{ include('shared_company_invite/_form.html.twig') }}
+
+    <a href="{{ path('shared_company_invite_index') }}">back to list</a>
+{% endblock %}
