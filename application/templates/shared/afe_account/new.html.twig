@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New AfeAccount{% endblock %}
+
+{% block body %}
+    <h1>Create new AfeAccount</h1>
+
+    {{ include('shared_afe_account/_form.html.twig') }}
+
+    <a href="{{ path('shared_afe_account_index') }}">back to list</a>
+{% endblock %}

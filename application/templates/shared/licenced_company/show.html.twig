@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LicencedCompany{% endblock %}
+
+{% block body %}
+    <h1>LicencedCompany</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ licenced_company.id }}</td>
+            </tr>
+            <tr>
+                <th>BaCode</th>
+                <td>{{ licenced_company.baCode }}</td>
+            </tr>
+            <tr>
+                <th>Licence</th>
+                <td>{{ licenced_company.licence }}</td>
+            </tr>
+            <tr>
+                <th>Abbreviation</th>
+                <td>{{ licenced_company.abbreviation }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ licenced_company.address }}</td>
+            </tr>
+            <tr>
+                <th>Phone</th>
+                <td>{{ licenced_company.phone }}</td>
+            </tr>
+            <tr>
+                <th>AgentName</th>
+                <td>{{ licenced_company.agentName }}</td>
+            </tr>
+            <tr>
+                <th>Code</th>
+                <td>{{ licenced_company.code }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_licenced_company_index') }}">back to list</a>
+
+    <a href="{{ path('shared_licenced_company_edit', {'id': licenced_company.id}) }}">edit</a>
+
+    {{ include('shared_licenced_company/_delete_form.html.twig') }}
+{% endblock %}

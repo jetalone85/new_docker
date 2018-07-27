@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit AfeAccount{% endblock %}
+
+{% block body %}
+    <h1>Edit AfeAccount</h1>
+
+    {{ include('shared_afe_account/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('shared_afe_account_index') }}">back to list</a>
+
+    {{ include('shared_afe_account/_delete_form.html.twig') }}
+{% endblock %}

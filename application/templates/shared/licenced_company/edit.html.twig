@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit LicencedCompany{% endblock %}
+
+{% block body %}
+    <h1>Edit LicencedCompany</h1>
+
+    {{ include('shared_licenced_company/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('shared_licenced_company_index') }}">back to list</a>
+
+    {{ include('shared_licenced_company/_delete_form.html.twig') }}
+{% endblock %}

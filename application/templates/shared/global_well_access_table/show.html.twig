@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GlobalWellAccessTable{% endblock %}
+
+{% block body %}
+    <h1>GlobalWellAccessTable</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>WellLicenceId</th>
+                <td>{{ global_well_access_table.wellLicenceId }}</td>
+            </tr>
+            <tr>
+                <th>CompanyId</th>
+                <td>{{ global_well_access_table.companyId }}</td>
+            </tr>
+            <tr>
+                <th>Id</th>
+                <td>{{ global_well_access_table.id }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_global_well_access_table_index') }}">back to list</a>
+
+    <a href="{{ path('shared_global_well_access_table_edit', {'id': global_well_access_table.id}) }}">edit</a>
+
+    {{ include('shared_global_well_access_table/_delete_form.html.twig') }}
+{% endblock %}

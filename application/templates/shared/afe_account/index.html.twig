@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfeAccount index{% endblock %}
+
+{% block body %}
+    <h1>AfeAccount index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Description</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for afe_account in afe_accounts %}
+            <tr>
+                <td>{{ afe_account.id }}</td>
+                <td>{{ afe_account.name }}</td>
+                <td>{{ afe_account.number }}</td>
+                <td>{{ afe_account.description }}</td>
+                <td>
+                    <a href="{{ path('shared_afe_account_show', {'id': afe_account.id}) }}">show</a>
+                    <a href="{{ path('shared_afe_account_edit', {'id': afe_account.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_afe_account_new') }}">Create new</a>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New LicencedCompany{% endblock %}
+
+{% block body %}
+    <h1>Create new LicencedCompany</h1>
+
+    {{ include('shared_licenced_company/_form.html.twig') }}
+
+    <a href="{{ path('shared_licenced_company_index') }}">back to list</a>
+{% endblock %}

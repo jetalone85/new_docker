@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CompanyService{% endblock %}
+
+{% block body %}
+    <h1>CompanyService</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ company_service.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ company_service.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_company_service_index') }}">back to list</a>
+
+    <a href="{{ path('shared_company_service_edit', {'id': company_service.id}) }}">edit</a>
+
+    {{ include('shared_company_service/_delete_form.html.twig') }}
+{% endblock %}

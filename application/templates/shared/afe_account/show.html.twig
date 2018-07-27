@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AfeAccount{% endblock %}
+
+{% block body %}
+    <h1>AfeAccount</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ afe_account.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ afe_account.name }}</td>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <td>{{ afe_account.number }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ afe_account.description }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_afe_account_index') }}">back to list</a>
+
+    <a href="{{ path('shared_afe_account_edit', {'id': afe_account.id}) }}">edit</a>
+
+    {{ include('shared_afe_account/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CompanyService index{% endblock %}
+
+{% block body %}
+    <h1>CompanyService index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for company_service in company_services %}
+            <tr>
+                <td>{{ company_service.id }}</td>
+                <td>{{ company_service.name }}</td>
+                <td>
+                    <a href="{{ path('shared_company_service_show', {'id': company_service.id}) }}">show</a>
+                    <a href="{{ path('shared_company_service_edit', {'id': company_service.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('shared_company_service_new') }}">Create new</a>
+{% endblock %}
