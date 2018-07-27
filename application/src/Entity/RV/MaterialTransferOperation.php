@@ -59,6 +59,8 @@ class MaterialTransferOperation
      * @ORM\Column(name="cost_subcode", type="integer")
      * @Serializer\Expose()
      */
+    private $costSubcode;
+
     /**
      * @var AfeAccount
      * @ORM\ManyToOne(targetEntity="App\Entity\Shared\AfeAccount", inversedBy="materialTransferOperations", cascade={"persist"})
@@ -248,5 +250,20 @@ class MaterialTransferOperation
     public function setMaterialTransfer(MaterialTransfer $MaterialTransfer)
     {
         $this->materialTransfer = $MaterialTransfer;
+    }
+    /**
+     * @return int
+     */
+    public function getCostSubcode(): int
+    {
+        return $this->costSubcode;
+    }
+
+    /**
+     * @param int $costSubcode
+     */
+    public function setCostSubcode(int $costSubcode): void
+    {
+        $this->costSubcode = $costSubcode;
     }
 }

@@ -72,23 +72,30 @@ class AfeCostReport
     protected $afeAccount;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\RV\RentalItem", mappedBy="afeAccount")
+     * @ORM\OneToMany(targetEntity="App\Entity\RV\RentalItem", mappedBy="afeCostReport")
      *
      * @var Collection|RentalItem[]
      */
     protected $rentalItems;
 
     /**
-    * @ORM\OneToMany(
-    *     targetEntity="DailyDrillingCostDetails",
-    *     mappedBy="afeCostReport",
-    *     cascade={"all"},
-    *     orphanRemoval=true,
-    *     fetch="EXTRA_LAZY"
-    * )
-    *
-    * @var Collection|DailyDrillingCostDetails[]
-    */
+     * @ORM\OneToMany(targetEntity="App\Entity\RV\RentalExtraItem", mappedBy="afeCostReport")
+     *
+     * @var Collection|RentalItem[]
+     */
+    protected $rentalExtraItems;
+
+    /**
+     * @ORM\OneToMany(
+     *     targetEntity="DailyDrillingCostDetails",
+     *     mappedBy="afeCostReport",
+     *     cascade={"all"},
+     *     orphanRemoval=true,
+     *     fetch="EXTRA_LAZY"
+     * )
+     *
+     * @var Collection|DailyDrillingCostDetails[]
+     */
     protected $dailyDrillingCostDetails;
 
     /**

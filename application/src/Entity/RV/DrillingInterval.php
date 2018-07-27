@@ -72,7 +72,7 @@ class DrillingInterval
     // RELATIONS
 
     /**
-     * @ORM\ManyToOne(targetEntity="Project", inversedBy="productivityItems")
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="drillingIntervals")
      * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      *
      * @var Project
