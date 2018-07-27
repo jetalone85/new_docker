@@ -64,6 +64,7 @@ class MaterialTransferOperation
     /**
      * @var AfeAccount
      * @ORM\ManyToOne(targetEntity="App\Entity\Shared\AfeAccount", inversedBy="materialTransferOperations", cascade={"persist"})
+     * @ORM\JoinColumn(name="afe_account_id", referencedColumnName="id")
      */
     private $afeAccount;
 

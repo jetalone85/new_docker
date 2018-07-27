@@ -80,7 +80,7 @@ class AfeAccount
      *
      * @var Collection|AfeCostReport[]
      */
-    protected $materialTransfereOperations;
+    protected $materialTransferOperations;
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\User")
