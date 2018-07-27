@@ -16,7 +16,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
  * @ApiResource()
- * @ORM\Table(name="eim_companies")
+ * @ORM\Table(name="shared_companies")
  * @ORM\Entity(repositoryClass="App\Repository\Shared\CompanyRepository")
  *
  *

@@ -9,6 +9,7 @@ use App\Entity\User;
 
 /**
  * @ApiResource()
+ * @ORM\Table(name="shared_company_handshakes")
  * @ORM\Entity()
  */
 class CompanyHandshake

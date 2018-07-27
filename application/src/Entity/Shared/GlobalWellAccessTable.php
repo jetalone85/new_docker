@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource()
- * @ORM\Table(name="global_well_access_table")
+ * @ORM\Table(name="shared_global_well_access_table")
  * @ORM\Entity
  */
 class GlobalWellAccessTable

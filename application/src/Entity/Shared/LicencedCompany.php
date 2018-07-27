@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource()
- * @ORM\Table()
+ * @ORM\Table(name="shared_licenced_companies")
  * @ORM\Entity(repositoryClass="App\Repository\Shared\LicencedCompanyRepository")
  */
 class LicencedCompany

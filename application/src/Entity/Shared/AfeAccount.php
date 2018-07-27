@@ -14,10 +14,10 @@ use JMS\Serializer\Annotation as Serializer;
 
 /**
  * @ApiResource()
+ * @ORM\Table(name="afe_account")
  * @ORM\Entity(repositoryClass="App\Repository\Shared\AfeAccountRepository")
  * @Serializer\ExclusionPolicy("all")
  *
- * @package App\Entity\Shared
  */
 class AfeAccount
 {

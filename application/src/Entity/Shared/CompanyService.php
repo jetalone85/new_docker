@@ -9,6 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource()
+ * @ORM\Table(name="shared_company_services")
  * @ORM\Entity()
  */
 class CompanyService

@@ -6,6 +6,7 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\MappedSuperclass()
+ * @ORM\Table(name="accumap_development_common")
  */
 class AccumapDevelopmentCommon
 {
