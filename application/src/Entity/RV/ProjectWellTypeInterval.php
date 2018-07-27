@@ -25,7 +25,7 @@ class ProjectWellTypeInterval
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="ProjectWellType", inversedBy="id")
+     * @ORM\ManyToOne(targetEntity="App\Entity\RV\ProjectWellType", inversedBy="id")
      * @ORM\JoinColumn(name="project_well_type_id", referencedColumnName="id")
      * @Serializer\Expose()
      *

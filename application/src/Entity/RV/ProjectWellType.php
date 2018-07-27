@@ -24,7 +24,7 @@ class ProjectWellType
     protected $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="Project", inversedBy="projectWellType")
+     * @ORM\ManyToOne(targetEntity="App\Entity\RV\Project", inversedBy="projectWellType")
      * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      *
      * @var Project
