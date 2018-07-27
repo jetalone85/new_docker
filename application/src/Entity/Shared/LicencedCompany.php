@@ -2,11 +2,11 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * LicencedCompany
- *
+ * @ApiResource()
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="App\Repository\Shared\LicencedCompanyRepository")
  */

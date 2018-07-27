@@ -2,17 +2,16 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * BopDrill class.
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_bop_drill")
  * @ORM\Entity(repositoryClass="App\Repository\RV\BopDrillRepository")
  *
  * @package App\Entity\RV
- * @author Michał Haracewiat <michal.haracewiat@polcode.net>
  */
 class BopDrill
 {

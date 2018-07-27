@@ -3,15 +3,12 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\User;
 
 /**
- * operator company can be managed by consultant company
- * accepted field is used in case of handshake request
- *
- * @author Damian Wróblewski
- *
+ * @ApiResource()
  * @ORM\Entity()
  */
 class CompanyHandshake

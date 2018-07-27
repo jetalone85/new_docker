@@ -2,14 +2,14 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Shared\AfeAccount;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @author Marcin Pyrka <marcin.pyrka@polcode.net>
- *
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\RV\RentalExtraItemRepository")
  * @ORM\Table("rv_rental_extra_item")
  *

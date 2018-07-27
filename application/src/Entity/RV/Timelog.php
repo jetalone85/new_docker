@@ -3,12 +3,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @author Damian Wróblewski
+ * @ApiResource()
  * @ORM\Table("rv_timelog")
  * @ORM\Entity(repositoryClass="App\Repository\RV\TimelogRepository")
  * @Serializer\ExclusionPolicy("all")

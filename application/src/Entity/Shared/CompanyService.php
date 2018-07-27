@@ -3,12 +3,12 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @author Damian Wróblewski
- *
+ * @ApiResource()
  * @ORM\Entity()
  */
 class CompanyService

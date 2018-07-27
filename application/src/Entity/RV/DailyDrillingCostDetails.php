@@ -2,14 +2,14 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * DailyDrillingCostDetails
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_daily_drilling_cost_details")
  * @ORM\Entity(repositoryClass="App\Repository\RV\DailyDrillingCostDetailsRepository")
  * @Serializer\ExclusionPolicy("all")

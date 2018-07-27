@@ -2,10 +2,11 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @author Damian Wróblewski
+ * @ApiResource()
  * @ORM\Entity()
  * @ORM\Table("rv_bha_component")
  */

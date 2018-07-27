@@ -3,11 +3,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * @author Damian Wróblewski
+ * @ApiResource()
  * @ORM\Entity()
  * @ORM\Table("rv_mud_materials")
  * @Serializer\ExclusionPolicy("all")

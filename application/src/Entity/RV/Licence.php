@@ -2,6 +2,7 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Annotations\Annotation\Required;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
@@ -11,8 +12,7 @@ use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Licence class.
- *
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\RV\LicenceRepository")
  * @ORM\Table(name="rv_well_licences")
  *

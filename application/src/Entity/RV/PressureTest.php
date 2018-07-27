@@ -2,12 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * PressureTest class.
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_pressure_test")
  * @ORM\Entity(repositoryClass="App\Repository\RV\PressureTestRepository")
  * @Serializer\ExclusionPolicy("all")

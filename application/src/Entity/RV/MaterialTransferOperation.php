@@ -2,16 +2,15 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\Shared\AfeAccount;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class MaterialTransferOperation
+ * @ApiResource()
  * @package App\Entity\RV
- * @author Marcin Pyrka <marcin.pyrka@polcode.net>
- *
  * @ORM\Table(name="rv_material_transfer_operation")
  * @ORM\Entity(repositoryClass="App\Repository\RV\MaterialTransferOperationRepository")
  * @Serializer\ExclusionPolicy("all")

@@ -2,13 +2,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * ProductivityItem class.
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_productivity_items")
  * @ORM\Entity(repositoryClass="App\Repository\RV\ProductivityItemsRepository")
  * @Serializer\ExclusionPolicy("all")

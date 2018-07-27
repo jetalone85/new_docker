@@ -2,10 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use DateTime;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * @ApiResource()
  * @ORM\Table(name="rv_productivity_report_dates")
  * @ORM\Entity()
  */

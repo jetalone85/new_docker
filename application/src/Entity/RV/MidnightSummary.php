@@ -2,12 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * MidnightSummary
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_midnight_summary")
  * @ORM\Entity(repositoryClass="App\Repository\RV\MidnightSummaryRepository")
  */

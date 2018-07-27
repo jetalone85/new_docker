@@ -2,18 +2,17 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * SafetyMeeting class.
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_safety_meeting")
  * @ORM\Entity(repositoryClass="App\Repository\RV\SafetyMeetingRepository")
  * @Serializer\ExclusionPolicy("all")
  *
  * @package App\Entity\RV
- * @author Michał Haracewiat <michal.haracewiat@polcode.net>
  */
 class SafetyMeeting
 {

@@ -2,10 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
+ * @ApiResource()
  * @ORM\Table(name="project_well_type_interval")
  * @ORM\Entity()
  * @Serializer\ExclusionPolicy("all")

@@ -2,11 +2,11 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * GlobalWellAccessTable
- *
+ * @ApiResource()
  * @ORM\Table(name="global_well_access_table")
  * @ORM\Entity
  */

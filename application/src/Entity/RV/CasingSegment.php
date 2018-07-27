@@ -2,13 +2,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * CasingSegment
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_casing_segment")
  * @ORM\Entity(repositoryClass="App\Repository\RV\CasingSegmentRepository")
  * @Serializer\ExclusionPolicy("all")

@@ -2,6 +2,7 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\Common\Collections\Criteria;
@@ -14,8 +15,7 @@ use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 /**
- * Company class.
- *
+ * @ApiResource()
  * @ORM\Table(name="eim_companies")
  * @ORM\Entity(repositoryClass="App\Repository\Shared\CompanyRepository")
  *

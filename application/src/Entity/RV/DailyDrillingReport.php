@@ -2,6 +2,7 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,14 +10,12 @@ use App\Entity\User;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * DailyDrillingReport class.
- *
+ * @ApiResource()
  * @ORM\Table("rv_daily_drilling_report")
  * @ORM\Entity(repositoryClass="App\Repository\RV\DailyDrillingReportRepository")
  * @Serializer\ExclusionPolicy("all")
  *
  * @package App\Entity\RV
- * @author Damian Wróblewski
  */
 class DailyDrillingReport
 {

@@ -2,6 +2,7 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -12,13 +13,11 @@ use App\Entity\User;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * AfeAccount class.
- *
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\Shared\AfeAccountRepository")
  * @Serializer\ExclusionPolicy("all")
  *
  * @package App\Entity\Shared
- * @author Damian Wróblewski
  */
 class AfeAccount
 {

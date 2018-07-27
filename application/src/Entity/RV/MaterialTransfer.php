@@ -2,6 +2,7 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use DateTime;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
@@ -11,10 +12,8 @@ use Doctrine\Common\Collections\Collection;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
- * Class MaterialTransfer
+ * @ApiResource()
  * @package App\Entity\RV
- * @author Marcin Pyrka <marcin.pyrka@polcode.net>
- *
  * @ORM\Table(name="rv_material_transfer")
  * @ORM\Entity(repositoryClass="App\Repository\RV\MaterialTransferRepository")
  * @Serializer\ExclusionPolicy("all")

@@ -2,11 +2,11 @@
 
 namespace App\Entity\Shared;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * AccumapDevelopment
- *
+ * @ApiResource()
  * @ORM\Table(name="accumap_development")
  * @ORM\Entity(repositoryClass="App\Repository\Shared\AccumapDevelopmentRepository")
  */

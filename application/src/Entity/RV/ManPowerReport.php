@@ -2,13 +2,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * ManPowerReport
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_man_power_report")
  * @ORM\Entity(repositoryClass="App\Repository\RV\ManPowerReportRepository")
  * @Serializer\ExclusionPolicy("all")

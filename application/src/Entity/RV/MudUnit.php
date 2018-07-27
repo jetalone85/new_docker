@@ -2,13 +2,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * MudUnit
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_mud_unit")
  * @ORM\Entity(repositoryClass="App\Repository\RV\MudUnitRepository")
  * @Serializer\ExclusionPolicy("all")

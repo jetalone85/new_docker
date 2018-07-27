@@ -3,12 +3,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Annotations\Annotation\Required;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * @author Damian Wróblewski
+ * @ApiResource()
  * @ORM\Entity(repositoryClass="App\Repository\RV\DirectionalSurveyRepository")
  *
  * @Serializer\ExclusionPolicy("all")

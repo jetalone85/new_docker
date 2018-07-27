@@ -2,14 +2,13 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * BitUsage
- *
- *
+ * @ApiResource()
  * @ORM\MappedSuperclass
  * @ORM\Table(name="rv_bit_usage")
  * @ORM\Entity

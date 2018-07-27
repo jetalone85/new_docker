@@ -2,6 +2,7 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,6 +10,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * Project class.
  *
+ * @ApiResource()
  * @ORM\Table(
  *     name="rv_project",
  *     uniqueConstraints={
@@ -24,7 +26,6 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="App\Repository\RV\ProjectRepository")
  *
  * @package App\Entity\RV
- * @author Michał Haracewiat <michal.haracewiat@polcode.net>
  */
 class Project
 {

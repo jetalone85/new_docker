@@ -2,12 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use App\Entity\User;
 
 /**
- * @author Damian Wróblewski
- *
+ * @ApiResource()
  * @ORM\Entity()
  */
 class ProjectAccessPrivileges

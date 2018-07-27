@@ -3,12 +3,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * MudSample class.
- *
+ * @ApiResource()
  * @ORM\Entity()
  * @ORM\Table("rv_mud_sample")
  * @Serializer\ExclusionPolicy("all")

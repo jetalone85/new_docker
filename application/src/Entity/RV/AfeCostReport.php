@@ -2,6 +2,7 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -9,8 +10,7 @@ use App\Entity\Shared\AfeAccount;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * AfeCostReport
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_afe_cost_report")
  * @ORM\Entity(repositoryClass="App\Repository\RV\AfeCostReportRepository")
  * @Serializer\ExclusionPolicy("all")

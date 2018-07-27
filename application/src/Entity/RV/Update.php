@@ -2,12 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Update
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_update")
  * @ORM\Entity(repositoryClass="App\Repository\RV\UpdateRepository")
  */

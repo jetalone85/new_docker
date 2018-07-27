@@ -2,12 +2,12 @@
 
 namespace App\Entity\RV;
 
+use ApiPlatform\Core\Annotation\ApiResource;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 
 /**
- * RigInspection
- *
+ * @ApiResource()
  * @ORM\Table(name="rv_rig_inspection")
  * @ORM\Entity(repositoryClass="App\Repository\RV\RigInspectionRepository")
  * @Serializer\ExclusionPolicy("all")
