@@ -122,7 +122,7 @@ services:
     volumes:
       - ./etc/nifi/conf:/opt/nifi/conf
     labels:
-      - "traefik.frontend.rule=Host:nifi.default.localhost"
+      - "traefik.frontend.rule=Host:nifi.default.ubuntu"
       - "traefik.port=8080"
     networks:
       - default
