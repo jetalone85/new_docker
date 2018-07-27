@@ -87,7 +87,7 @@ services:
       ZOO_MY_ID: 1
       ZOO_SERVERS: server.1=zoo_node_1:2888:3888 server.2=zoo_node_2:2888:3888 server.3=zoo_node_3:2888:3888
     networks:
-      - bigdata
+      - default
 
   zoo_node_2:
     image: zookeeper
@@ -99,7 +99,7 @@ services:
       ZOO_MY_ID: 2
       ZOO_SERVERS: server.1=zoo_node_1:2888:3888 server.2=zoo_node_2:2888:3888 server.3=zoo_node_3:2888:3888
     networks:
-      - bigdata
+      - default
 
   zoo_node_3:
     image: zookeeper
@@ -111,7 +111,7 @@ services:
       ZOO_MY_ID: 3
       ZOO_SERVERS: server.1=zoo_node_1:2888:3888 server.2=zoo_node_2:2888:3888 server.3=zoo_node_3:2888:3888
     networks:
-      - bigdata
+      - default
 
   nifi:
     image: xemuliam/nifi
@@ -125,7 +125,7 @@ services:
       - "traefik.frontend.rule=Host:nifi.default.localhost"
       - "traefik.port=8080"
     networks:
-      - bigdata
+      - default
 
 volumes:
   sylius:
