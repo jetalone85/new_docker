@@ -31,11 +31,10 @@ services:
       - .docker/nginx/upstream.conf:/etc/nginx/conf.d/upstream.conf
       - .docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./application:/var/www/html
-    labels:
-      - "traefik.frontend.rule=Host:web.default.${HOST}"
-      - "traefik.backend=nginx"
     networks:
       - default
+    ports:
+      - 8080:80
     deploy:
       resources:
         limits:
@@ -45,16 +44,6 @@ services:
           cpus: '2'
           memory: 512M
 
-  traefik:
-    image: traefik
-    command: --api --docker
-    ports:
-      - "8080:8080"
-      - "80:80"
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-    networks:
-      - default
 
   cache:
     image: redis
