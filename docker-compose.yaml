@@ -121,9 +121,8 @@ services:
       ZK_NODES_LIST: 'zoo_node_1,zoo_node_2,zoo_node_3'
     volumes:
       - ./etc/nifi/conf:/opt/nifi/conf
-    labels:
-      - "traefik.frontend.rule=Host:nifi.default.ubuntu"
-      - "traefik.port=8080"
+    ports:
+      - "9090:8080"
     networks:
       - default
 
