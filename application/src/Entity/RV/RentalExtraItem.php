@@ -105,6 +105,7 @@ class RentalExtraItem
      * @var DailyDrillingReport
      *
      * @ORM\ManyToOne(targetEntity="App\Entity\RV\DailyDrillingReport", inversedBy="rentalUsages")
+     * @ORM\JoinColumn(name="dailyDrillingReport_id", referencedColumnName="id")
      * @Serializer\Expose()
      */
     private $dailyDrillingReport;
