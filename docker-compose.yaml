@@ -2,9 +2,8 @@ version: '3.5'
 
 services:
   php:
-#    build: .docker/php
-    image: newdocker_php:latest
-    volumes: 
+    build: .docker/php
+    volumes:
       - ./application:/var/www/html
     environment:
       - DATABASE_HOST=db
@@ -16,14 +15,6 @@ services:
     networks:
       - default
     working_dir: /var/www/html
-    deploy:
-      resources:
-        limits:
-          cpus: '4'
-          memory: 1024M
-        reservations:
-          cpus: '2'
-          memory: 512M
   
   nginx:
     image: nginx:latest
@@ -35,14 +26,6 @@ services:
       - default
     ports:
       - 8080:80
-    deploy:
-      resources:
-        limits:
-          cpus: '4'
-          memory: 1024M
-        reservations:
-          cpus: '2'
-          memory: 512M
 
 
   cache:
@@ -65,14 +48,6 @@ services:
       - ./var/lib/postgresql/data:/var/lib/postgresql/data
     networks:
       - default
-    deploy:
-      resources:
-        limits:
-          cpus: '4'
-          memory: 1024M
-        reservations:
-          cpus: '2'
-          memory: 512M
 
   node:
     image: node:8
@@ -135,14 +110,6 @@ services:
       - "9090:8080"
     networks:
       - default
-    deploy:
-      resources:
-        limits:
-          cpus: '4'
-          memory: 4096M
-        reservations:
-          cpus: '2'
-          memory: 512M
 
 volumes:
   sylius:
