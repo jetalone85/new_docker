@@ -103,7 +103,6 @@ services:
 
   zoo_node_1:
     image: zookeeper
-    container_name: zoo_node_1
     restart: always
     ports:
       - 2181
@@ -115,7 +114,6 @@ services:
 
   zoo_node_2:
     image: zookeeper
-    container_name: zoo_node_2
     restart: always
     ports:
       - 2181
@@ -127,7 +125,6 @@ services:
 
   zoo_node_3:
     image: zookeeper
-    container_name: zoo_node_3
     restart: always
     ports:
       - 2181
@@ -139,7 +136,6 @@ services:
 
   nifi:
     image: xemuliam/nifi
-    container_name: nifi
     environment:
       IS_CLUSTER_NODE: 1
       ZK_NODES_LIST: 'zoo_node_1,zoo_node_2,zoo_node_3'
