@@ -80,7 +80,7 @@ class CasingBowl
     private $outletType;
 
     /**
-     * @var decimal
+     * @var float
      *
      * @ORM\Column(name="rating", type="decimal", precision=10, scale=0)
      * @Assert\NotBlank()
